@@ -65,9 +65,9 @@ If you want to package OpenCam into a standalone `.exe` file to run without Pyth
    ```
 2. **Build the application:**
    ```bash
-   pyinstaller --noconfirm --onedir --windowed --add-data "web;web" --name "OpenCam" main.py
+   pyinstaller --noconfirm --onefile --windowed --add-data "web;web" --name "OpenCam" main.py
    ```
-3. Your executable will be ready in the `dist/OpenCam/` directory!
+3. Your executable will be ready as a single file in the `dist/` directory!
 
 ## Settings
 You can adjust the camera resolution and framerate directly from the desktop application. If your phone is overheating or draining battery too quickly, lower the resolution to `640x480` and the framerate to `24 FPS`.
