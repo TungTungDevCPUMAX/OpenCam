@@ -1,0 +1,9 @@
+Flask>=3.0.0
+flask-sock>=0.6.0
+aiortc>=1.7.0
+opencv-python>=4.9.0
+pyvirtualcam>=0.15.0
+customtkinter>=5.2.2
+cryptography>=42.0.5
+av>=11.0.0
+qrcode[pil]>=7.4.2

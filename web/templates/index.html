@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OpenCam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="/static/Logo.png" alt="OpenCam Logo" class="app-logo">
+                <div class="recording-dot" id="recording-dot"></div>
+                <h1>OpenCam</h1>
+            </div>
+            <div class="status-badge disconnected" id="status-badge">Disconnected</div>
+        </header>
+
+        <main>
+            <div class="video-container" id="video-container">
+                <video id="local-video" autoplay playsinline muted></video>
+                
+                <!-- Overlay controls directly on video -->
+                <div class="video-overlay-controls" id="video-overlay-controls">
+                    <button id="flip-btn" class="overlay-icon-btn" title="Flip camera">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 16V7a2 2 0 0 0-2-2H6"></path>
+                            <polyline points="14 1 20 7 14 13"></polyline>
+                            <path d="M4 8v9a2 2 0 0 0 2 2h12"></path>
+                            <polyline points="10 23 4 17 10 11"></polyline>
+                        </svg>
+                    </button>
+                    <button id="stop-btn" class="overlay-stop-btn hidden" title="Stop">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                            <rect x="6" y="6" width="12" height="12" rx="2"></rect>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Status overlay -->
+                <div class="overlay-glass">
+                    <p id="info-text">Ready to stream</p>
+                </div>
+
+                <!-- Stats overlay on video -->
+                <div class="video-stats" id="stats-panel">
+                    <span id="stat-res">--</span>
+                    <span class="stat-sep">•</span>
+                    <span id="stat-fps">--</span> FPS
+                </div>
+            </div>
+
+            <div class="controls" id="start-controls">
+                <button id="start-btn" class="primary-btn">
+                    <span class="btn-text">Start OpenCam</span>
+                    <div class="ripple"></div>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
